@@ -1,0 +1,696 @@
+{
+  "id": "9062ece7-0f98-4fc4-ac17-dcf88ebae349",
+  "name": "活动运营台账 · 体验项目",
+  "scope": "演示材料上传、原文追溯、基础页面生成与交付。此项目不调用 AI。",
+  "mode": "local",
+  "createdAt": "2026-11-07T02:16:17.622Z",
+  "status": "completed",
+  "revision": 4,
+  "files": [
+    {
+      "id": "9382c773-560d-4b75-a738-638a058ea1e3",
+      "name": "体验项目需求.txt",
+      "storedName": "9382c773-560d-4b75-a738-638a058ea1e3.txt",
+      "size": 466,
+      "role": "requirement",
+      "parsed": true,
+      "sourceCount": 4,
+      "warnings": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "9382c773-560d-4b75-a738-638a058ea1e3:1",
+      "fileId": "9382c773-560d-4b75-a738-638a058ea1e3",
+      "fileName": "体验项目需求.txt",
+      "role": "requirement",
+      "location": "第 1 行",
+      "text": "【活动台账】支持活动记录的新增、编辑、删除、关键词搜索和详情查看；字段：活动名称、负责人、活动时间、活动状态。"
+    },
+    {
+      "id": "9382c773-560d-4b75-a738-638a058ea1e3:2",
+      "fileId": "9382c773-560d-4b75-a738-638a058ea1e3",
+      "fileName": "体验项目需求.txt",
+      "role": "requirement",
+      "location": "第 2 行",
+      "text": "【活动台账】首页展示活动记录总数，新增或删除后同步变化。"
+    },
+    {
+      "id": "9382c773-560d-4b75-a738-638a058ea1e3:3",
+      "fileId": "9382c773-560d-4b75-a738-638a058ea1e3",
+      "fileName": "体验项目需求.txt",
+      "role": "requirement",
+      "location": "第 3 行",
+      "text": "【素材管理】支持素材记录的新增、编辑、删除、搜索和详情查看；字段：素材名称、用途、维护人。"
+    },
+    {
+      "id": "9382c773-560d-4b75-a738-638a058ea1e3:4",
+      "fileId": "9382c773-560d-4b75-a738-638a058ea1e3",
+      "fileName": "体验项目需求.txt",
+      "role": "requirement",
+      "location": "第 4 行",
+      "text": "【素材管理】列表支持分页、排序，无数据时展示空状态。"
+    }
+  ],
+  "baseline": {
+    "summary": "依据原文段落建立的候选需求索引，未经 AI 语义分析。请核对范围与复合条目。",
+    "questions": [
+      "规则体验将文本段落视为候选条目，不保证需求提取完整或评分拆分正确。"
+    ],
+    "ignored": [],
+    "requirements": [
+      {
+        "id": "F001",
+        "name": "活动记录管理（已复核）",
+        "module": "活动台账",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:1",
+        "quote": "【活动台账】支持活动记录的新增、编辑、删除、关键词搜索和详情查看；字段：活动名称、负责人、活动时间、活动状态。",
+        "kind": "feature",
+        "priority": "原文未标注",
+        "acceptance": "待人工逐项确认",
+        "inScope": true
+      },
+      {
+        "id": "F002",
+        "name": "【活动台账】首页展示活动记录总数，新增或删除后同步变化。",
+        "module": "活动台账",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:2",
+        "quote": "【活动台账】首页展示活动记录总数，新增或删除后同步变化。",
+        "kind": "feature",
+        "priority": "原文未标注",
+        "acceptance": "待人工逐项确认",
+        "inScope": true
+      },
+      {
+        "id": "F003",
+        "name": "【素材管理】支持素材记录的新增、编辑、删除、搜索和详情查看；字段：素材名称、用途、维护人。",
+        "module": "素材管理",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:3",
+        "quote": "【素材管理】支持素材记录的新增、编辑、删除、搜索和详情查看；字段：素材名称、用途、维护人。",
+        "kind": "feature",
+        "priority": "原文未标注",
+        "acceptance": "待人工逐项确认",
+        "inScope": true
+      },
+      {
+        "id": "F004",
+        "name": "【素材管理】列表支持分页、排序，无数据时展示空状态。",
+        "module": "素材管理",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:4",
+        "quote": "【素材管理】列表支持分页、排序，无数据时展示空状态。",
+        "kind": "feature",
+        "priority": "原文未标注",
+        "acceptance": "待人工逐项确认",
+        "inScope": true
+      }
+    ]
+  },
+  "spec": {
+    "title": "活动运营台账 · 体验项目",
+    "description": "演示材料上传、原文追溯、基础页面生成与交付。此项目不调用 AI。",
+    "pages": [
+      {
+        "id": "P001",
+        "name": "活动台账",
+        "module": "活动台账",
+        "description": "按原文生成的基础交互样例，业务规则需逐项实现与验收。",
+        "kind": "list",
+        "requirementIds": [
+          "F001",
+          "F002"
+        ],
+        "fields": [
+          {
+            "key": "field1",
+            "label": "活动名称",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "field2",
+            "label": "负责人",
+            "type": "text",
+            "required": false
+          },
+          {
+            "key": "field3",
+            "label": "活动时间",
+            "type": "text",
+            "required": false
+          },
+          {
+            "key": "field4",
+            "label": "活动状态",
+            "type": "text",
+            "required": false
+          }
+        ],
+        "actions": [
+          "create",
+          "edit",
+          "delete"
+        ],
+        "rows": [
+          {
+            "field1": "活动台账示例 1",
+            "field2": "演示数据",
+            "field3": "演示数据",
+            "field4": "演示数据"
+          },
+          {
+            "field1": "活动台账示例 2",
+            "field2": "演示数据",
+            "field3": "演示数据",
+            "field4": "演示数据"
+          },
+          {
+            "field1": "活动台账示例 3",
+            "field2": "演示数据",
+            "field3": "演示数据",
+            "field4": "演示数据"
+          },
+          {
+            "field1": "活动台账示例 4",
+            "field2": "演示数据",
+            "field3": "演示数据",
+            "field4": "演示数据"
+          },
+          {
+            "field1": "活动台账示例 5",
+            "field2": "演示数据",
+            "field3": "演示数据",
+            "field4": "演示数据"
+          }
+        ],
+        "route": "/pages/p001"
+      },
+      {
+        "id": "P002",
+        "name": "素材管理",
+        "module": "素材管理",
+        "description": "按原文生成的基础交互样例，业务规则需逐项实现与验收。",
+        "kind": "list",
+        "requirementIds": [
+          "F003",
+          "F004"
+        ],
+        "fields": [
+          {
+            "key": "field1",
+            "label": "素材名称",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "field2",
+            "label": "用途",
+            "type": "text",
+            "required": false
+          },
+          {
+            "key": "field3",
+            "label": "维护人",
+            "type": "text",
+            "required": false
+          }
+        ],
+        "actions": [
+          "create",
+          "edit",
+          "delete"
+        ],
+        "rows": [
+          {
+            "field1": "素材管理示例 1",
+            "field2": "演示数据",
+            "field3": "演示数据"
+          },
+          {
+            "field1": "素材管理示例 2",
+            "field2": "演示数据",
+            "field3": "演示数据"
+          },
+          {
+            "field1": "素材管理示例 3",
+            "field2": "演示数据",
+            "field3": "演示数据"
+          },
+          {
+            "field1": "素材管理示例 4",
+            "field2": "演示数据",
+            "field3": "演示数据"
+          },
+          {
+            "field1": "素材管理示例 5",
+            "field2": "演示数据",
+            "field3": "演示数据"
+          }
+        ],
+        "route": "/pages/p002"
+      }
+    ],
+    "limitations": [
+      "规则体验生成基础页面，未实现需求中的专有计算、审批、权限和外部接口。",
+      "演示数据为合成样例，不是原始业务记录。"
+    ]
+  },
+  "generated": {
+    "directory": "source-r4",
+    "files": [
+      "package.json",
+      "index.html",
+      "vite.config.js",
+      "src/main.js",
+      "src/App.vue",
+      "src/domain.js",
+      "src/spec.json",
+      "需求追溯.json",
+      "README.md"
+    ],
+    "revision": 4,
+    "previewReady": true
+  },
+  "qa": {
+    "time": "2026-11-07T06:52:01.655Z",
+    "build": {
+      "passed": true,
+      "output": "vite v8.3.6 building client environment for production...\ntransforming...\n✓ 1583 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.36 kB │ gzip:   0.28 kB\ndist/assets/index-Bgf2OgE0.css  364.06 kB │ gzip:  48.89 kB\ndist/assets/index-DxzLAxur.js   995.37 kB │ gzip: 319.96 kB\n\n[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n✓ built in 527ms\n",
+      "exitCode": 0
+    },
+    "checks": [
+      {
+        "name": "生产构建",
+        "status": "passed",
+        "detail": "Vite 实际构建成功，预览资源已生成"
+      },
+      {
+        "name": "活动台账 / 数据动作",
+        "status": "passed",
+        "detail": "已运行必填、零值、允许操作与未启用操作断言；不是业务验收"
+      },
+      {
+        "name": "素材管理 / 数据动作",
+        "status": "passed",
+        "detail": "已运行必填、零值、允许操作与未启用操作断言；不是业务验收"
+      }
+    ],
+    "matrix": [
+      {
+        "id": "F001",
+        "name": "活动记录管理（已复核）",
+        "quote": "【活动台账】支持活动记录的新增、编辑、删除、关键词搜索和详情查看；字段：活动名称、负责人、活动时间、活动状态。",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:1",
+        "kind": "feature",
+        "pages": [
+          "活动台账"
+        ],
+        "status": "partial",
+        "detail": "已有基础页面映射；业务语义、评分细项及专有规则尚待人工验收"
+      },
+      {
+        "id": "F002",
+        "name": "【活动台账】首页展示活动记录总数，新增或删除后同步变化。",
+        "quote": "【活动台账】首页展示活动记录总数，新增或删除后同步变化。",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:2",
+        "kind": "feature",
+        "pages": [
+          "活动台账"
+        ],
+        "status": "partial",
+        "detail": "已有基础页面映射；业务语义、评分细项及专有规则尚待人工验收"
+      },
+      {
+        "id": "F003",
+        "name": "【素材管理】支持素材记录的新增、编辑、删除、搜索和详情查看；字段：素材名称、用途、维护人。",
+        "quote": "【素材管理】支持素材记录的新增、编辑、删除、搜索和详情查看；字段：素材名称、用途、维护人。",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:3",
+        "kind": "feature",
+        "pages": [
+          "素材管理"
+        ],
+        "status": "partial",
+        "detail": "已有基础页面映射；业务语义、评分细项及专有规则尚待人工验收"
+      },
+      {
+        "id": "F004",
+        "name": "【素材管理】列表支持分页、排序，无数据时展示空状态。",
+        "quote": "【素材管理】列表支持分页、排序，无数据时展示空状态。",
+        "sourceId": "9382c773-560d-4b75-a738-638a058ea1e3:4",
+        "kind": "feature",
+        "pages": [
+          "素材管理"
+        ],
+        "status": "partial",
+        "detail": "已有基础页面映射；业务语义、评分细项及专有规则尚待人工验收"
+      }
+    ],
+    "limitations": [
+      "规则体验生成基础页面，未实现需求中的专有计算、审批、权限和外部接口。",
+      "演示数据为合成样例，不是原始业务记录。"
+    ],
+    "note": "构建和基础动作测试已执行；未将需求映射计为完整实现，未自动宣称评分通过。"
+  },
+  "delivery": {
+    "filename": "delivery-r4.zip",
+    "time": "2026-11-07T06:52:01.689Z",
+    "size": 11200,
+    "limitations": [
+      "规则体验生成基础页面，未实现需求中的专有计算、审批、权限和外部接口。",
+      "演示数据为合成样例，不是原始业务记录。"
+    ]
+  },
+  "logs": [
+    {
+      "id": "0167be8c-8a21-43c8-8c3c-60592e7927ce",
+      "time": "2026-11-07T02:16:17.629Z",
+      "message": "已创建自带示例。所有演示材料均为合成内容，不调用外部 AI。",
+      "level": "info"
+    },
+    {
+      "id": "e9f16296-1d06-4ded-a4f9-67b0976c3329",
+      "time": "2026-11-07T02:16:17.861Z",
+      "message": "开始：解析材料",
+      "level": "info"
+    },
+    {
+      "id": "d104cf40-5417-441f-bf77-e55b09f5c7d0",
+      "time": "2026-11-07T02:16:17.867Z",
+      "message": "正在读取 体验项目需求.txt",
+      "level": "info"
+    },
+    {
+      "id": "a18859d3-13c7-4364-bd11-ad3040b55174",
+      "time": "2026-11-07T02:16:17.878Z",
+      "message": "完成：解析材料 · 已提取 4 段原文，文件解析提示可在材料页查看",
+      "level": "success"
+    },
+    {
+      "id": "0fab1e90-56c8-410c-a670-08144984cd41",
+      "time": "2026-11-07T02:16:17.882Z",
+      "message": "开始：建立需求基线",
+      "level": "info"
+    },
+    {
+      "id": "b37eeab3-f498-4bb5-94fb-42f1846d9136",
+      "time": "2026-11-07T02:16:17.887Z",
+      "message": "完成：建立需求基线 · 已整理 4 条需求 / 评分候选项",
+      "level": "success"
+    },
+    {
+      "id": "05c8a9e2-3219-465e-a3e8-a36707c98edc",
+      "time": "2026-11-07T02:16:17.892Z",
+      "message": "开始：生成页面方案",
+      "level": "info"
+    },
+    {
+      "id": "35adcb13-68cc-4091-977f-000f15a9899e",
+      "time": "2026-11-07T02:16:17.897Z",
+      "message": "完成：生成页面方案 · 已生成 2 个页面规格",
+      "level": "success"
+    },
+    {
+      "id": "7a6b0dbf-ce98-49af-953a-cdaee9673ae5",
+      "time": "2026-11-07T02:16:17.902Z",
+      "message": "开始：生成 DEMO 工程",
+      "level": "info"
+    },
+    {
+      "id": "9077d62d-bfb5-4633-be68-b12349aa0793",
+      "time": "2026-11-07T02:16:17.958Z",
+      "message": "完成：生成 DEMO 工程 · 已写入 9 个工程文件",
+      "level": "success"
+    },
+    {
+      "id": "037959a5-ecdf-4750-8a15-9137f29f6efb",
+      "time": "2026-11-07T02:16:17.963Z",
+      "message": "开始：构建与自检",
+      "level": "info"
+    },
+    {
+      "id": "2227cc27-9a89-472b-8165-fd26a9b83ef7",
+      "time": "2026-11-07T02:16:17.969Z",
+      "message": "正在执行 Vite 构建与基础数据动作回归",
+      "level": "info"
+    },
+    {
+      "id": "0bdaf8a3-6064-4795-b29f-ce4ade10ff4c",
+      "time": "2026-11-07T02:16:18.892Z",
+      "message": "完成：构建与自检 · 3 项技术检查通过，业务语义仍待验收",
+      "level": "success"
+    },
+    {
+      "id": "74663cc0-fa3f-41f5-88b4-3cbb7f825b79",
+      "time": "2026-11-07T02:16:18.897Z",
+      "message": "开始：修复与交付",
+      "level": "info"
+    },
+    {
+      "id": "7dbdaed5-3ecb-4e83-82cf-032e28299e6e",
+      "time": "2026-11-07T02:16:18.935Z",
+      "message": "完成：修复与交付 · 源码与验收报告已打包，可预览和下载；业务缺口已随包记录",
+      "level": "success"
+    },
+    {
+      "id": "c7fb3c06-7ba6-4626-bddc-87f345b0603f",
+      "time": "2026-11-07T02:16:19.811Z",
+      "message": "需求基线已人工调整，页面方案及下游结果需要重新生成",
+      "level": "info"
+    },
+    {
+      "id": "e6b197fd-007b-4a9a-a112-78a7f0caee1b",
+      "time": "2026-11-07T02:16:20.659Z",
+      "message": "开始：生成页面方案",
+      "level": "info"
+    },
+    {
+      "id": "f0454455-115f-4bb0-90e4-35920e14cc9f",
+      "time": "2026-11-07T02:16:20.664Z",
+      "message": "完成：生成页面方案 · 已生成 2 个页面规格",
+      "level": "success"
+    },
+    {
+      "id": "3272bc8f-1f8a-4bd5-849c-67897099dd7a",
+      "time": "2026-11-07T02:16:20.671Z",
+      "message": "开始：生成 DEMO 工程",
+      "level": "info"
+    },
+    {
+      "id": "709691d8-1001-41d3-984c-fec0bd569086",
+      "time": "2026-11-07T02:16:20.723Z",
+      "message": "完成：生成 DEMO 工程 · 已写入 9 个工程文件",
+      "level": "success"
+    },
+    {
+      "id": "6c77864c-ce1a-4306-9ff8-9dd48194aeab",
+      "time": "2026-11-07T02:16:20.729Z",
+      "message": "开始：构建与自检",
+      "level": "info"
+    },
+    {
+      "id": "d94caad7-a28d-4061-875d-bf239060f2e3",
+      "time": "2026-11-07T02:16:20.735Z",
+      "message": "正在执行 Vite 构建与基础数据动作回归",
+      "level": "info"
+    },
+    {
+      "id": "11ed720d-2532-4a33-bb41-3ae0f580bd98",
+      "time": "2026-11-07T02:16:21.654Z",
+      "message": "完成：构建与自检 · 3 项技术检查通过，业务语义仍待验收",
+      "level": "success"
+    },
+    {
+      "id": "6dced665-bcf5-4427-a7e4-527a055acde4",
+      "time": "2026-11-07T02:16:21.659Z",
+      "message": "开始：修复与交付",
+      "level": "info"
+    },
+    {
+      "id": "d228e143-ab88-459c-a5ef-7c5521f4d27d",
+      "time": "2026-11-07T02:16:21.683Z",
+      "message": "完成：修复与交付 · 源码与验收报告已打包，可预览和下载；业务缺口已随包记录",
+      "level": "success"
+    },
+    {
+      "id": "7f6f4c3f-4859-464f-84b5-58003ffde6f8",
+      "time": "2026-11-07T02:16:30.128Z",
+      "message": "页面规格已人工调整，工程及下游结果需要重新生成",
+      "level": "info"
+    },
+    {
+      "id": "82d9e7ab-fdf1-45dc-8c3a-02735c0060f9",
+      "time": "2026-11-07T02:16:34.162Z",
+      "message": "开始：生成 DEMO 工程",
+      "level": "info"
+    },
+    {
+      "id": "ca4f2a09-0319-4e83-98bd-f5116a7339c2",
+      "time": "2026-11-07T02:16:34.207Z",
+      "message": "完成：生成 DEMO 工程 · 已写入 9 个工程文件",
+      "level": "success"
+    },
+    {
+      "id": "61ecf3f6-93a8-4bba-80f9-1ca1ecb04e7a",
+      "time": "2026-11-07T02:16:36.329Z",
+      "message": "开始：构建与自检",
+      "level": "info"
+    },
+    {
+      "id": "d3946d0e-91bc-4f04-9fa8-b28077e1a775",
+      "time": "2026-11-07T02:16:36.334Z",
+      "message": "正在执行 Vite 构建与基础数据动作回归",
+      "level": "info"
+    },
+    {
+      "id": "93d36be1-27d6-4941-ac2d-28c69fc1fe30",
+      "time": "2026-11-07T02:16:37.187Z",
+      "message": "完成：构建与自检 · 3 项技术检查通过，业务语义仍待验收",
+      "level": "success"
+    },
+    {
+      "id": "a1d8c7ff-1242-4d30-bfe8-e28851b4cb44",
+      "time": "2026-11-07T02:16:37.193Z",
+      "message": "开始：修复与交付",
+      "level": "info"
+    },
+    {
+      "id": "724fee62-b8b4-4e11-ac2d-5fcd983f0995",
+      "time": "2026-11-07T02:16:37.217Z",
+      "message": "完成：修复与交付 · 源码与验收报告已打包，可预览和下载；业务缺口已随包记录",
+      "level": "success"
+    },
+    {
+      "id": "c9eff8b1-d586-40de-a18f-5b1fbcab6045",
+      "time": "2026-11-07T06:52:00.416Z",
+      "message": "页面规格已人工调整，工程及下游结果需要重新生成",
+      "level": "info"
+    },
+    {
+      "id": "df50abfd-cb77-42ef-a8bc-7f3b4a7a5255",
+      "time": "2026-11-07T06:52:00.436Z",
+      "message": "开始：生成 DEMO 工程",
+      "level": "info"
+    },
+    {
+      "id": "7480d629-8aeb-4661-a1ce-0fe69a55d803",
+      "time": "2026-11-07T06:52:00.494Z",
+      "message": "完成：生成 DEMO 工程 · 已写入 9 个工程文件",
+      "level": "success"
+    },
+    {
+      "id": "a6e21708-8817-492b-8496-d54aa08f17e8",
+      "time": "2026-11-07T06:52:00.500Z",
+      "message": "开始：构建与自检",
+      "level": "info"
+    },
+    {
+      "id": "b6dee1e7-116b-45e6-88c6-c4a863646447",
+      "time": "2026-11-07T06:52:00.506Z",
+      "message": "正在执行 Vite 构建与基础数据动作回归",
+      "level": "info"
+    },
+    {
+      "id": "27708888-4454-466b-a8ea-760b440cad4e",
+      "time": "2026-11-07T06:52:00.527Z",
+      "message": "任务已暂停，可从中断阶段继续",
+      "level": "warning"
+    },
+    {
+      "id": "97a2f99b-44de-4726-aa79-9eafd91f9d10",
+      "time": "2026-11-07T06:52:00.543Z",
+      "message": "开始：构建与自检",
+      "level": "info"
+    },
+    {
+      "id": "cace391e-7556-4a23-90d7-18c6e87cdbfd",
+      "time": "2026-11-07T06:52:00.548Z",
+      "message": "正在执行 Vite 构建与基础数据动作回归",
+      "level": "info"
+    },
+    {
+      "id": "927f9b16-88c8-43c6-8bd4-77974621eb3b",
+      "time": "2026-11-07T06:52:01.662Z",
+      "message": "完成：构建与自检 · 3 项技术检查通过，业务语义仍待验收",
+      "level": "success"
+    },
+    {
+      "id": "cf740735-9d51-40ae-83de-93631f53c25c",
+      "time": "2026-11-07T06:52:01.668Z",
+      "message": "开始：修复与交付",
+      "level": "info"
+    },
+    {
+      "id": "a6603c9e-512e-4c5d-91da-1921700c5cc5",
+      "time": "2026-11-07T06:52:01.689Z",
+      "message": "完成：修复与交付 · 源码与验收报告已打包，可预览和下载；业务缺口已随包记录",
+      "level": "success"
+    }
+  ],
+  "history": [
+    {
+      "revision": 1,
+      "time": "2026-11-07T02:16:19.807Z",
+      "reason": "需求基线已人工调整，页面方案及下游结果需要重新生成"
+    },
+    {
+      "revision": 2,
+      "time": "2026-11-07T02:16:30.123Z",
+      "reason": "页面规格已人工调整，工程及下游结果需要重新生成"
+    },
+    {
+      "revision": 3,
+      "time": "2026-11-07T06:52:00.409Z",
+      "reason": "页面规格已人工调整，工程及下游结果需要重新生成"
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "name": "解析材料",
+      "status": "done",
+      "message": "已提取 4 段原文，文件解析提示可在材料页查看",
+      "startedAt": "2026-11-07T02:16:17.861Z",
+      "completedAt": "2026-11-07T02:16:17.878Z"
+    },
+    {
+      "id": 1,
+      "name": "建立需求基线",
+      "status": "done",
+      "message": "已整理 4 条需求 / 评分候选项",
+      "startedAt": "2026-11-07T02:16:17.882Z",
+      "completedAt": "2026-11-07T02:16:17.887Z"
+    },
+    {
+      "id": 2,
+      "name": "生成页面方案",
+      "status": "done",
+      "message": "已生成 2 个页面规格",
+      "startedAt": "2026-11-07T02:16:20.659Z",
+      "completedAt": "2026-11-07T02:16:20.664Z"
+    },
+    {
+      "id": 3,
+      "name": "生成 DEMO 工程",
+      "status": "done",
+      "message": "已写入 9 个工程文件",
+      "startedAt": "2026-11-07T06:52:00.436Z",
+      "completedAt": "2026-11-07T06:52:00.494Z"
+    },
+    {
+      "id": 4,
+      "name": "构建与自检",
+      "status": "done",
+      "message": "3 项技术检查通过，业务语义仍待验收",
+      "startedAt": "2026-11-07T06:52:00.543Z",
+      "completedAt": "2026-11-07T06:52:01.662Z"
+    },
+    {
+      "id": 5,
+      "name": "修复与交付",
+      "status": "done",
+      "message": "源码与验收报告已打包，可预览和下载；业务缺口已随包记录",
+      "startedAt": "2026-11-07T06:52:01.668Z",
+      "completedAt": "2026-11-07T06:52:01.689Z"
+    }
+  ],
+  "updatedAt": "2026-11-07T06:52:01.696Z"
+}

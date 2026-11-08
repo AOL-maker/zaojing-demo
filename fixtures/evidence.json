@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-11-08T08:30:00.000Z",
+  "revision": 4,
+  "mode": "local",
+  "reviewRequired": false,
+  "reviews": [],
+  "reviewHistory": [],
+  "measurements": [],
+  "stages": [
+    { "id": 0, "name": "解析材料", "status": "done" },
+    { "id": 1, "name": "建立需求基线", "status": "done" },
+    { "id": 2, "name": "生成页面方案", "status": "done" },
+    { "id": 3, "name": "生成 DEMO 工程", "status": "done" },
+    { "id": 4, "name": "构建与自检", "status": "done" },
+    { "id": 5, "name": "修复与交付", "status": "done" }
+  ],
+  "note": "公网只读预览使用合成示例数据，不包含真实业务记录或人工复核记录。"
+}

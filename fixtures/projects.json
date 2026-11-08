@@ -1,0 +1,17 @@
+[
+  {
+    "id": "9062ece7-0f98-4fc4-ac17-dcf88ebae349",
+    "name": "活动运营台账 · 体验项目",
+    "scope": "演示材料上传、原文追溯、基础页面生成与交付。此项目不调用 AI。",
+    "mode": "local",
+    "status": "completed",
+    "createdAt": "2026-11-07T02:16:17.622Z",
+    "updatedAt": "2026-11-07T06:52:01.689Z",
+    "fileCount": 1,
+    "requirementCount": 4,
+    "pageCount": 2,
+    "completedStages": 6,
+    "stage": "可交付",
+    "revision": 4
+  }
+]
